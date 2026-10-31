@@ -1,0 +1,39 @@
+name: ecommerce
+description: Zariyah e-commerce app.
+publish_to: 'none'
+version: 1.0.0+1
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  sqflite: ^2.3.0
+  image_picker: ^1.0.7
+  crypto: ^3.0.3
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.14.1
+  flutter_native_splash: ^2.4.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+
+# Run: dart run flutter_launcher_icons
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: assets/images/icon.png
+  adaptive_icon_background: "#F6F5F0"
+  adaptive_icon_foreground: assets/images/icon_adaptive.png
+  remove_alpha_ios: true
+
+# Run: dart run flutter_native_splash:create
+# Plain cream screen (no Flutter icon, no image) so only the in-app Zariyah splash is seen.
+flutter_native_splash:
+  color: "#F6F5F0"
+  color_dark: "#F6F5F0"
+  android_12:
+    color: "#F6F5F0"
